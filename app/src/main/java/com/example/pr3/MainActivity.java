@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MyApp";
-
     TextView startup_page_text_view;
     Button enter_system_btn;
     ImageView startup_logo;
@@ -30,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.change_theme_fragment,
-                            ChangeThemeFragment.class, null)
+                    .add(R.id.change_theme_fragment, ChangeThemeFragment.class, null)
                     .commit();
         }
         getSupportFragmentManager().setFragmentResultListener("requestKey",
@@ -45,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 setTheme(R.style.Theme_PR3);
                 enter_system_btn.setBackgroundColor(getResources().getColor(R.color.purple_500));
             }
-        });
-        enter_system_btn.setOnClickListener(view -> {
-            String login = login_edit_text.getText().toString().split("@")[0];
         });
     }
 }
