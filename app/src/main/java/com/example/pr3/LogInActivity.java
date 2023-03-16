@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
     TextView startup_page_text_view;
     Button enter_system_btn;
     ImageView startup_logo;
@@ -18,19 +18,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         dark_theme = false;
         startup_logo = findViewById(R.id.image_view);
         enter_system_btn = findViewById(R.id.button);
         startup_page_text_view = findViewById(R.id.text_view);
         login_edit_text = findViewById(R.id.login_edit_text);
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .setReorderingAllowed(true)
-                    .add(R.id.change_theme_fragment, ChangeThemeFragment.class, null)
-                    .commit();
-        }
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .setReorderingAllowed(true)
+//                    .add(R.id.change_theme_fragment, ChangeThemeFragment.class, null)
+//                    .commit();
+//        }
         getSupportFragmentManager().setFragmentResultListener("requestKey",
                 this, (requestKey, bundle) -> {
             dark_theme = bundle.getBoolean("bundleKey");
@@ -43,5 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 enter_system_btn.setBackgroundColor(getResources().getColor(R.color.purple_500));
             }
         });
+
     }
 }

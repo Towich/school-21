@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="ИЗМЕНИТЬ СТАТУС ПРОЕКТА"/>
+    <Button
+        android:id="@+id/failed_state_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/red"
+        android:text="Failed" />
+
+    <Button
+        android:id="@+id/success_state_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Success"
+        android:backgroundTint="@color/green" />
+
+    <Button
+        android:id="@+id/in_progress_state_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="In progress"
+        android:backgroundTint="@color/light_gray" />
+    <Button
+        android:id="@+id/not_started_state_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Not Started"
+        android:backgroundTint="@color/dark_gray" />
+
+</LinearLayout>
