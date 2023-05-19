@@ -22,7 +22,7 @@ public class ProjectListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         project_change_status_window_opened = false;
-        LinearLayout linearLayout = getView().findViewById(R.id.linear_layout_for_scroll_view);
+        LinearLayout linearLayout = view.findViewById(R.id.linear_layout_for_scroll_view);
         String[] project_names = new String[]{
                 "s21_string+", "s21_math", "SimpleBashUtils",
                 "s21_decimal", "s21_matrix", "Linux",
