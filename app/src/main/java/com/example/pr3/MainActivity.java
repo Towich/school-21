@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
     Button menu_button_start;
     Button menu_button_projects;
-
+    Button button_to_fragment_list_view;
+    Button button_to_fragment_recycler_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 fragmentManager.beginTransaction()
                         .replace(R.id.fragment_container_view, new ProjectsFragment())
+                        .commit();
+            }
+        });
+
+        button_to_fragment_list_view = findViewById(R.id.button_to_fragment_list_view);
+        button_to_fragment_list_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container_view, new TasksFragment())
+                        .commit();
+            }
+        });
+
+        button_to_fragment_recycler_view = findViewById(R.id.button_to_fragment_recycler_view);
+        button_to_fragment_recycler_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container_view, new TestsFragment())
                         .commit();
             }
         });
