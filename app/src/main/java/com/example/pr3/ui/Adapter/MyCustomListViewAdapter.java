@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.example.pr3.R;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/AppTheme.NoActionBar"
-    tools:context="com.example.pr3.LogInActivity">
+    tools:context="com.example.pr3.ui.Activity.LogInActivity">
 
     <ImageView
         android:id="@+id/image_view"
@@ -66,7 +66,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/change_theme_fragment"
-        android:name="com.example.pr3.ChangeThemeFragment"
+        android:name="com.example.pr3.ui.Fragment.ChangeThemeFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

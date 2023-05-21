@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Fragment;
 
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.pr3.R;
+import com.example.pr3.ui.Fragment.ProjectSetStatusFragment;
 
 public class ProjectsFragment extends Fragment {
 

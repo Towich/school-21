@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuFragment">
+    tools:context=".ui.Fragment.MenuFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -30,27 +30,51 @@
 
     <Button
         android:id="@+id/button_to_tasks"
-        android:textColor="@color/white"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:background="@color/black"
         android:text="Отправить в Tasks"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_edit_text" />
 
     <Button
         android:id="@+id/button_to_tests"
-        android:textColor="@color/white"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
         android:background="@color/black"
         android:text="Отправить в Tests"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_edit_text" />
+
+    <Button
+        android:id="@+id/button_notification"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        android:text="Уведомление"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_tasks" />
+
+    <Button
+        android:id="@+id/button_service"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        android:text="Сервис"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_tests" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Activity;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.pr3.R;
 
 
 public class LogInActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Fragment;
 
 import android.os.Bundle;
 
@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.pr3.ui.Adapter.MyCustomRecyclerViewAdapter;
+import com.example.pr3.R;
 
 import java.util.ArrayList;
 import java.util.List;

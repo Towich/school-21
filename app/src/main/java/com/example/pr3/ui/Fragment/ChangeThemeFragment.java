@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.pr3.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class ChangeThemeFragment extends Fragment {

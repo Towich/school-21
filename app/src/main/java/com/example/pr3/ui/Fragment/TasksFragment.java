@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Fragment;
 
 import android.os.Bundle;
 
@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.pr3.ui.Adapter.MyCustomListViewAdapter;
+import com.example.pr3.R;
 
 import java.util.ArrayList;
 import java.util.List;

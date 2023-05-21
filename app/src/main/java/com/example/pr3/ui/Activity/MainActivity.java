@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,16 +15,10 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.pr3.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
-    FragmentManager fragmentManager;
-    Button menu_button_start;
-    Button menu_button_projects;
-    Button button_to_fragment_list_view;
-    Button button_to_fragment_recycler_view;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,6 +1,5 @@
-package com.example.pr3;
+package com.example.pr3.ui.Fragment;
 
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentResultListener;
+
+import com.example.pr3.R;
 
 public class ProjectListFragment extends Fragment {
     boolean project_change_status_window_opened;

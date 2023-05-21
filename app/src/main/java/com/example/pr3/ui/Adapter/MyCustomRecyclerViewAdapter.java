@@ -1,4 +1,4 @@
-package com.example.pr3;
+package com.example.pr3.ui.Adapter;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.pr3.R;
 
 import java.util.List;
 
