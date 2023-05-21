@@ -3,15 +3,19 @@ package com.example.pr3;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,45 +29,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fragmentManager = getSupportFragmentManager();
-        menu_button_start = findViewById(R.id.menu_button_start);
-        menu_button_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, new MenuFragment())
-                        .commit();
-            }
-        });
-        menu_button_projects = findViewById(R.id.menu_button_projects);
-        menu_button_projects.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, new ProjectsFragment())
-                        .commit();
-            }
-        });
 
-        button_to_fragment_list_view = findViewById(R.id.button_to_fragment_list_view);
-        button_to_fragment_list_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, new TasksFragment())
-                        .commit();
-            }
-        });
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setSelectedItemId(R.id.menuFragment);
+//        bottomNav.setOnItemSelectedListener(item -> {
+//            Fragment selectedFragment = null;
+//            int itemId = item.getItemId();
+//            if (itemId == R.id.tasksFragment) {
+//                selectedFragment = new TasksFragment();
+//            } else if (itemId == R.id.testsFragment) {
+//                selectedFragment = new TestsFragment();
+//            } else if (itemId == R.id.menuFragment) {
+//                selectedFragment = new MenuFragment();
+//            }
+//            // It will help to replace the
+//            // one fragment to other.
+//            if (selectedFragment != null) {
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, selectedFragment).commit();
+//            }
+//            return true;
+//        });
 
-        button_to_fragment_recycler_view = findViewById(R.id.button_to_fragment_recycler_view);
-        button_to_fragment_recycler_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, new TestsFragment())
-                        .commit();
-            }
-        });
     }
 
     @Nullable
@@ -71,4 +57,25 @@ public class MainActivity extends AppCompatActivity {
     public View onCreateView(@NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
         return super.onCreateView(name, context, attrs);
     }
+
+//    private final BottomNavigationView.OnNavigationItemSelectedListener navListener = item -> {
+//        // By using switch we can easily get
+//        // the selected fragment
+//        // by using there id.
+//        Fragment selectedFragment = null;
+//        int itemId = item.getItemId();
+//        if (itemId == R.id.tasksFragment) {
+//            selectedFragment = new TasksFragment();
+//        } else if (itemId == R.id.testsFragment) {
+//            selectedFragment = new TestsFragment();
+//        } else if (itemId == R.id.menuFragment) {
+//            selectedFragment = new MenuFragment();
+//        }
+//        // It will help to replace the
+//        // one fragment to other.
+//        if (selectedFragment != null) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, selectedFragment).commit();
+//        }
+//        return true;
+//    };
 }

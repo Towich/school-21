@@ -34,9 +34,12 @@ public class TestsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        int args = getArguments().getInt(MenuFragment.KEY_TRANSFER_FROM_MENU);
+
+
         List<String> items = new ArrayList<>();
 
-        for(int i = 1; i < 300; i++){
+        for(int i = 1; i <= args; i++){
             items.add("[" + i + "] Test");
         }
 
