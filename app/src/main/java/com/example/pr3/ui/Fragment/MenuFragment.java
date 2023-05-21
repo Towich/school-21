@@ -120,5 +120,14 @@ public class MenuFragment extends Fragment {
                 getActivity().startService(intent);
             }
         });
+
+        // Кнопка перехода на Task 1
+        Button button_task = view.findViewById(R.id.button_task);
+        button_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_oneTaskFragment);
+            }
+        });
     }
 }

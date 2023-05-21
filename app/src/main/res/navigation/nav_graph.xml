@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_menuFragment_to_testsFragment"
             app:destination="@id/testsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_oneTaskFragment"
+            app:destination="@id/oneTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
@@ -27,4 +30,18 @@
         android:name="com.example.pr3.ui.Fragment.TestsFragment"
         android:label="fragment_tests"
         tools:layout="@layout/fragment_tests" />
+    <fragment
+        android:id="@+id/oneTaskFragment"
+        android:name="com.example.pr3.ui.Fragment.OneTaskFragment"
+        android:label="fragment_one_task"
+        tools:layout="@layout/fragment_one_task" >
+        <action
+            android:id="@+id/action_oneTaskFragment_to_endTaskFragment"
+            app:destination="@id/endTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endTaskFragment"
+        android:name="com.example.pr3.ui.Fragment.EndTaskFragment"
+        android:label="fragment_end_task"
+        tools:layout="@layout/fragment_end_task" />
 </navigation>
