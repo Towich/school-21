@@ -9,26 +9,20 @@ import com.example.pr3.data.source.OneTaskModel;
 import java.util.List;
 
 public class OneTaskViewModel extends ViewModel {
-
     private int correct_answers;
     private OneTaskRepository mOneTaskRepository;
-
     public MutableLiveData<OneTaskModel> answer;
-
     public OneTaskViewModel(){
         correct_answers = 0;
         mOneTaskRepository = new OneTaskRepository();
         answer = mOneTaskRepository.getAnswer(0);
     }
-
     public OneTaskModel getTaskModel(){
         return answer.getValue();
     }
-
     public String getAnswer(){
         return answer.getValue().getAnswer();
     }
-
     public boolean isCorrect(){
         return answer.getValue().isCorrect();
     }
@@ -44,15 +38,12 @@ public class OneTaskViewModel extends ViewModel {
 
         return false;
     }
-
     public String[] getAllAnswers(){
         return mOneTaskRepository.getAllAnswers();
     }
-
     public int addAndGetCorrectAnswers() {
         return ++correct_answers;
     }
-
     public void resetCorrectAnswers(){
         correct_answers = 0;
     }

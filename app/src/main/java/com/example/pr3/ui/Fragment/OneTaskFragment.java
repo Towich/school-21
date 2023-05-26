@@ -65,6 +65,8 @@ public class OneTaskFragment extends Fragment {
                 public void onClick(View view) {
                     int currentAnswers = 0;
 
+                    btn.setEnabled(false);
+
                     // получаем корректность ответа
                     boolean isCorrect = mViewModel.isCorrect(btn.getText().toString());
 
