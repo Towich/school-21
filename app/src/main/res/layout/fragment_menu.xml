@@ -95,5 +95,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_to_tasks" />
 
+    <Button
+        android:id="@+id/button_contacts"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="148dp"
+        android:text="Контакты"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_questions"
+        app:layout_constraintStart_toEndOf="@+id/button_task"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_tests" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

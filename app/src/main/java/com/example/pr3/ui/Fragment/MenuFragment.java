@@ -138,5 +138,14 @@ public class MenuFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_questionsFragment);
             }
         });
+
+        // Кнопка перехода на Contacts
+        Button button_contacts = view.findViewById(R.id.button_contacts);
+        button_contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_contactsFragment);
+            }
+        });
     }
 }
