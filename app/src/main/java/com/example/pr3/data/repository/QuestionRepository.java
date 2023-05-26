@@ -21,10 +21,10 @@ public class QuestionRepository {
 
     public QuestionRepository(Application application){
         QuestionDatabase db = QuestionDatabase.getDatabase(application);
-        QuestionDao mDao = db.questionDao();
+        questionDao = db.questionDao();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            mAllQuestions = Transformations.map(mDao.getAllQuestions(), entities -> entities.stream()
+            mAllQuestions = Transformations.map(questionDao.getAllQuestions(), entities -> entities.stream()
                     .map(QuestionEntity::toModel).collect(Collectors.toList()));
         }
     }

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_menuFragment_to_questionsFragment"
             app:destination="@id/questionsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
@@ -60,5 +63,22 @@
         android:id="@+id/questionsFragment"
         android:name="com.example.pr3.ui.Fragment.QuestionsFragment"
         android:label="fragment_questions"
-        tools:layout="@layout/fragment_questions" />
+        tools:layout="@layout/fragment_questions" >
+        <action
+            android:id="@+id/action_questionsFragment_to_newQuestionFragment"
+            app:destination="@id/newQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newQuestionFragment"
+        android:name="com.example.pr3.ui.Fragment.NewQuestionFragment"
+        android:label="NewQuestionFragment" >
+        <action
+            android:id="@+id/action_newQuestionFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.pr3.ui.Fragment.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
 </navigation>
