@@ -20,7 +20,7 @@ public class LogInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.fragment_login);
         dark_theme = false;
         startup_logo = findViewById(R.id.image_view);
         enter_system_btn = findViewById(R.id.button);

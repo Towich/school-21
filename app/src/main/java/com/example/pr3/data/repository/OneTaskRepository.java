@@ -2,8 +2,8 @@ package com.example.pr3.data.repository;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.pr3.data.resources.OneTaskDataSource;
-import com.example.pr3.data.source.OneTaskModel;
+import com.example.pr3.data.source.OneTaskDataSource;
+import com.example.pr3.data.resources.OneTaskModel;
 
 public class OneTaskRepository {
     public MutableLiveData<OneTaskModel> getAnswer(int index){

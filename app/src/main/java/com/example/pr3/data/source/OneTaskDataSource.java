@@ -1,11 +1,10 @@
-package com.example.pr3.data.resources;
+package com.example.pr3.data.source;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.pr3.data.source.OneTaskModel;
+import com.example.pr3.data.resources.OneTaskModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class OneTaskDataSource {
 

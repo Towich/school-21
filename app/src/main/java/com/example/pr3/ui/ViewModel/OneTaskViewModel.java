@@ -4,9 +4,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.pr3.data.repository.OneTaskRepository;
-import com.example.pr3.data.source.OneTaskModel;
-
-import java.util.List;
+import com.example.pr3.data.resources.OneTaskModel;
 
 public class OneTaskViewModel extends ViewModel {
     private int correct_answers;

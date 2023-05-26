@@ -1,4 +1,4 @@
-package com.example.pr3.data.source;
+package com.example.pr3.data.resources;
 
 public class OneTaskModel {
     private final String answer;
