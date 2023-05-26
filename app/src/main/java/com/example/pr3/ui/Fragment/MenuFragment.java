@@ -129,5 +129,14 @@ public class MenuFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_oneTaskFragment);
             }
         });
+
+        // Кнопка перехода на Questions
+        Button button_questions = view.findViewById(R.id.button_questions);
+        button_questions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_questionsFragment);
+            }
+        });
     }
 }

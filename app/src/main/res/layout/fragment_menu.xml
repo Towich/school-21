@@ -29,21 +29,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button_to_tasks"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
-        android:text="Отправить в Tasks"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_edit_text" />
-
-    <Button
         android:id="@+id/button_to_tests"
         android:layout_width="160dp"
         android:layout_height="100dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
         android:text="Отправить в Tests"
         android:textColor="@color/white"
@@ -51,21 +40,21 @@
         app:layout_constraintTop_toBottomOf="@+id/menu_edit_text" />
 
     <Button
-        android:id="@+id/button_notification"
-        android:layout_width="100dp"
+        android:id="@+id/button_to_tasks"
+        android:layout_width="160dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Уведомление"
+        android:layout_marginTop="160dp"
+        android:text="Отправить в Tasks"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_to_tasks" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_edit_text" />
 
     <Button
         android:id="@+id/button_service"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="Сервис"
         android:textColor="@color/white"
@@ -77,11 +66,34 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Task 1"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_notification" />
+
+    <Button
+        android:id="@+id/button_questions"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Вопросы"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_service" />
+
+    <Button
+        android:id="@+id/button_notification"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Уведомление"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_tasks" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
