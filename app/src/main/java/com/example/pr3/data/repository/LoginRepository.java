@@ -41,10 +41,10 @@ public class LoginRepository {
     public void createSharedPreferences(Context context) {
         sharedPreferencesDataSource.createFile(context);
     }
-    public void saveSharedPreferences(String dataToSave) {
-        sharedPreferencesDataSource.save(dataToSave);
+    public void saveSharedPreferences(String key, String dataToSave) {
+        sharedPreferencesDataSource.save(key, dataToSave);
     }
-    public String loadSharedPreferences() {
-        return sharedPreferencesDataSource.load();
+    public String loadSharedPreferences(String key) {
+        return sharedPreferencesDataSource.load(key);
     }
 }

@@ -22,8 +22,6 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_login);
         dark_theme = false;
-        startup_logo = findViewById(R.id.image_view);
-        enter_system_btn = findViewById(R.id.button);
         startup_page_text_view = findViewById(R.id.text_view);
         login_edit_text = findViewById(R.id.login_edit_text);
 

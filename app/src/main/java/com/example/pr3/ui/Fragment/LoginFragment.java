@@ -2,6 +2,7 @@ package com.example.pr3.ui.Fragment;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.example.pr3.R;
 import com.example.pr3.data.repository.LoginRepository;
+import com.example.pr3.data.source.PasswordDataSource;
+import com.example.pr3.data.source.SharedPreferencesDataSource;
 import com.example.pr3.ui.ViewModel.LoginViewModel;
 
 public class LoginFragment extends Fragment {
@@ -36,11 +40,31 @@ public class LoginFragment extends Fragment {
 
         mViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
 
+        // Initialize Storages
         CreateAppSpecific();
         CreateSharedStorage();
+        InitializeSharedPreferences();
 
+
+        // EditTexts
         EditText login_edit_text = view.findViewById(R.id.login_edit_text);
         EditText password_edit_text = view.findViewById(R.id.password_edit_text);
+
+        Button button_enter_system = view.findViewById(R.id.button_enter_system);
+        button_enter_system.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(login_edit_text.getText().toString().equals(PasswordDataSource.LOGIN)
+                        && password_edit_text.getText().toString().equals(PasswordDataSource.PASSWORD)) {
+                    Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_menuFragment);
+                }
+                else{
+                    button_enter_system.setText("ОШИБКА!!");
+                    button_enter_system.getBackground().setColorFilter(button_enter_system.getContext().getResources()
+                                    .getColor(R.color.red), PorterDuff.Mode.MULTIPLY);
+                }
+            }
+        });
 
         // App-Specific Storage
 
@@ -80,6 +104,28 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 password_edit_text.setText(mViewModel.loadSharedStorage());
+            }
+        });
+
+        // SharedPreferences
+
+        // save button
+        Button button_save_shared_preferences = view.findViewById(R.id.button_save_shared_preferences);
+        button_save_shared_preferences.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mViewModel.saveSharedPreferences(SharedPreferencesDataSource.SAVE_KEY_1, login_edit_text.getText().toString());
+                mViewModel.saveSharedPreferences(SharedPreferencesDataSource.SAVE_KEY_2, password_edit_text.getText().toString());
+            }
+        });
+
+        // load button
+        Button button_load_shared_preferences = view.findViewById(R.id.button_load_shared_preferences);
+        button_load_shared_preferences.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                login_edit_text.setText(mViewModel.loadSharedPreferences(SharedPreferencesDataSource.SAVE_KEY_1));
+                password_edit_text.setText(mViewModel.loadSharedPreferences(SharedPreferencesDataSource.SAVE_KEY_2));
             }
         });
     }

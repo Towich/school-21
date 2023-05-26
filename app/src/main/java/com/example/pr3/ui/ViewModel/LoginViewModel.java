@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.lifecycle.ViewModel;
 
 import com.example.pr3.data.repository.LoginRepository;
+import com.example.pr3.data.source.SharedPreferencesDataSource;
 
 public class LoginViewModel extends ViewModel {
     private final LoginRepository repository;   // Repository
@@ -39,10 +40,11 @@ public class LoginViewModel extends ViewModel {
     public void createSharedPreferences(Context context) {
         repository.createSharedPreferences(context);
     }
-    public void saveSharedPreferences(String dataToSave) {
-        repository.saveSharedPreferences(dataToSave);
+    public void saveSharedPreferences(String key, String dataToSave) {
+        repository.saveSharedPreferences(key, dataToSave);
     }
-    public String loadSharedPreferences() {
-        return repository.loadSharedPreferences();
+    public String loadSharedPreferences(String key) {
+        return repository.loadSharedPreferences(key);
     }
+
 }

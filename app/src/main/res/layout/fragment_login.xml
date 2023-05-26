@@ -7,15 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.pr3.ui.Fragment.LoginFragment">
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:contentDescription="@string/logo_description"
-        android:src="@drawable/s21_logo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/change_theme_fragment" />
 
     <TextView
         android:id="@+id/text_view"
@@ -25,65 +16,51 @@
         android:text="@string/startup_page_text"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_view" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/login_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:autofillHints="true"
         android:hint="@string/hint_for_login"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_load_app_specific"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_save_app_specific"
         app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
     <EditText
         android:id="@+id/password_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:autofillHints="true"
         android:hint="@string/hint_for_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_load_common_storage"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/button_save_common_storage"
         app:layout_constraintTop_toBottomOf="@+id/login_edit_text" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_enter_system"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="140dp"
         android:text="@string/enter_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/change_theme_fragment"
-        android:name="com.example.pr3.ui.Fragment.ChangeThemeFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_change_theme" />
+        app:layout_constraintTop_toBottomOf="@+id/button_save_shared_preferences" />
 
     <Button
         android:id="@+id/button_save_app_specific"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="4dp"
         android:text="save"
-        app:layout_constraintEnd_toStartOf="@+id/login_edit_text"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
@@ -91,40 +68,38 @@
         android:id="@+id/button_load_app_specific"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
         android:text="load"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toEndOf="@+id/login_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
     <Button
         android:id="@+id/button_save_common_storage"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:text="save"
-        app:layout_constraintEnd_toStartOf="@+id/password_edit_text"
-        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/button_save_app_specific" />
 
     <Button
         android:id="@+id/button_load_common_storage"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="4dp"
         android:text="load"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toEndOf="@+id/password_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/button_load_app_specific" />
 
     <Button
         android:id="@+id/button_save_shared_preferences"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
         android:text="save all"
-        app:layout_constraintEnd_toStartOf="@+id/password_edit_text"
-        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_save_common_storage" />
 
@@ -132,10 +107,10 @@
         android:id="@+id/button_load_shared_preferences"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="4dp"
         android:text="load all"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toEndOf="@+id/password_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/button_load_common_storage" />
 
 
